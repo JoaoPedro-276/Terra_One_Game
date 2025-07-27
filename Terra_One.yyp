@@ -1,6 +1,6 @@
 {
   "$GMProject":"v1",
-  "%Name":"BLANK GAME",
+  "%Name":"Terra_One",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -8,7 +8,7 @@
     "children":[],
     "name":"Default",
   },
-  "defaultScriptType":0,
+  "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Animation Curves","folderPath":"folders/Animation Curves.yy","name":"Animation Curves","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -33,11 +33,13 @@
   "MetaData":{
     "IDEVersion":"2024.13.1.193",
   },
-  "name":"BLANK GAME",
+  "name":"Terra_One",
   "resources":[
     {"id":{"name":"f_MenuInicial","path":"fonts/f_MenuInicial/f_MenuInicial.yy",},},
     {"id":{"name":"obj_MenuInicial","path":"objects/obj_MenuInicial/obj_MenuInicial.yy",},},
     {"id":{"name":"RmInicial","path":"rooms/RmInicial/RmInicial.yy",},},
+    {"id":{"name":"snd_mover","path":"sounds/snd_mover/snd_mover.yy",},},
+    {"id":{"name":"snd_selecionar","path":"sounds/snd_selecionar/snd_selecionar.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

@@ -1,13 +1,8 @@
-var _mx = device_mouse_x_to_gui(0);
-var _my = device_mouse_y_to_gui(0);
-
-
 draw_set_font(f_MenuInicial);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
 var espacamento_vertical = 15;
-
 var _wgui = display_get_gui_width();
 var _hgui = display_get_gui_height();
 var _hstr = string_height("I");
@@ -16,53 +11,23 @@ var tam_menu = array_length(menu_inicial);
 var altura_menu = tam_menu * (_hstr + espacamento_vertical);
 var y_base = (_hgui / 2) - (altura_menu / 2) + (_hstr + espacamento_vertical) / 2;
 
-for(var i = 0; i < tam_menu; i++)
-{
-	
-	var _wstr = string_width(menu_inicial[i]);
-
+for (var i = 0; i < tam_menu; i++) {
 	var y_offset = i * (_hstr + espacamento_vertical);
 	
-	var x1 = _wgui / 2 - _wstr / 2;
-	var y1 = y_base - _hstr / 2 + y_offset; //top left
+	var alvo_escala = (i == indice_selecionado) ? 1.4 : 1;
+	esc[i] = lerp(esc[i], alvo_escala, 0.15);
 	
-	var x2 = _wgui / 2 + _wstr / 2;
-	var y2 = y_base + _hstr / 2 + y_offset; //button rigth
-
-	if(point_in_rectangle(_mx,_my,x1,y1,x2,y2))
-	{
-		esc[i] = lerp(esc[i], 1.4, 0.15);
-		
-		if(mouse_check_button_pressed(mb_left))
-		{
-			switch menu_inicial[i]
-			{
-				case menu_inicial[0]: //Jogar
-					show_message("Vamos jogar");
-					break;
-				case menu_inicial[1]: //Opções
-					show_message("Opciona meu pau aqui, porra");
-					break;
-				case menu_inicial[2]: //Créditos
-					show_message("Feito pela equipe TerraOne");
-					break;
-				case menu_inicial[3]: //Sair
-					game_end();
-					break;
-			}	
-
-		}
-
+	if (i == indice_selecionado){
+		draw_set_color(c_yellow);
+	} else {
+		draw_set_color(c_white);
 	}
-	else
-	{
-		esc[i] = lerp(esc[i], 1, 0.15);
-	}
-
 	
 	draw_text_transformed(_wgui / 2, y_base + y_offset, menu_inicial[i], esc[i], esc[i], 0);
+	
 }
 
+draw_set_color(c_white);
 draw_set_halign(-1);
 draw_set_valign(-1);
 draw_set_font(-1);

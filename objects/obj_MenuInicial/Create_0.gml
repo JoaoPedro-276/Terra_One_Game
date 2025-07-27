@@ -1,7 +1,4 @@
 menu_inicial = ["Jogar", "Opções", "Créditos", "Sair"];
-esc[array_length(menu_inicial) - 1] = 0;
+esc = array_create(array_length(menu_inicial), 1);
 
-for(var i = 0; i < array_length(esc); i++)
-{
-	esc[i] = 1;
-}
+indice_selecionado = 0;
