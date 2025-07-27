@@ -37,14 +37,17 @@
   "resources":[
     {"id":{"name":"f_MenuInicial","path":"fonts/f_MenuInicial/f_MenuInicial.yy",},},
     {"id":{"name":"obj_MenuInicial","path":"objects/obj_MenuInicial/obj_MenuInicial.yy",},},
-    {"id":{"name":"RmInicial","path":"rooms/RmInicial/RmInicial.yy",},},
+    {"id":{"name":"rm_inicial","path":"rooms/rm_inicial/rm_inicial.yy",},},
+    {"id":{"name":"rm_jogo","path":"rooms/rm_jogo/rm_jogo.yy",},},
     {"id":{"name":"snd_mover","path":"sounds/snd_mover/snd_mover.yy",},},
     {"id":{"name":"snd_selecionar","path":"sounds/snd_selecionar/snd_selecionar.yy",},},
+    {"id":{"name":"spr_testeroom","path":"sprites/spr_testeroom/spr_testeroom.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"RmInicial","path":"rooms/RmInicial/RmInicial.yy",},},
+    {"roomId":{"name":"rm_inicial","path":"rooms/rm_inicial/rm_inicial.yy",},},
+    {"roomId":{"name":"rm_jogo","path":"rooms/rm_jogo/rm_jogo.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
